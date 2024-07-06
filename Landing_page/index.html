@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/Users/LAB_PC_4/Desktop/python/index.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Cochan</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .main_container {
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            width: 100%;
+        }
+
+        .main {
+            font-family: 'Roboto Slab', serif;
+            background: #bd621c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 5vh;
+            margin-bottom: 3rem;
+        }
+
+        .para1 {
+            font-weight: bold;
+            color: white;
+            letter-spacing: 2px;
+            font-size: .9rem;
+        }
+
+        .highlight {
+            color: white;
+        }
+
+        .highlight:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav {
+            /* border: 2px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .img {
+            /* border: 2px solid red; */
+            width: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        #img1 {
+            width: 70%;
+            height: 7vh;
+            padding-left: 1.5rem;
+        }
+
+        .head {
+            /* border: 2px solid blue; */
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info {
+            /* border: 2px solid yellow; */
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            font-family: Courier;
+        }
+
+        .footer {
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            font-weight: 600;
+            font-size: .8rem;
+            letter-spacing: 2px;
+            word-spacing: .5rem;
+        }
+
+        .para4 {
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 1rem;
+        }
+
+        .txt {
+            color: black;
+            text-decoration: none;
+        }
+
+        .txt:hover {
+            color: #bd621c;
+        }
+
+        .image {
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            /* border: 2px solid black; */
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: -1;
+        }
+
+        .back_img {
+            background: url("https://i1.wp.com/cochonrestaurant.com/wp-content/uploads/2021/05/sign.jpg?fit=1157%2C636&ssl=1");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            /* border: 2px solid red; */
+            height: 80vh;
+            width: 97%;
+        }
+
+        .containt_1 {
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 0rem 6rem 0rem;
+        }
+
+        .heading_1 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.2rem;
+            margin-bottom: .5rem;
+        }
+
+        .img3 {
+            margin-bottom: .5rem;
+        }
+
+        .para5 {
+            font-family: Courier;
+            text-align: center;
+            width: 55%;
+            word-spacing: 10px;
+            font-size: 1.1rem;
+            line-height: 1.6em;
+        }
+
+        .dish {
+            /* border: 5px solid black; */
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img_dish1 {
+            background: url("https://i2.wp.com/cochonrestaurant.com/wp-content/uploads/2020/02/image-break-one.jpg?fit=570%2C405&ssl=1");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* border: 2px solid red; */
+            width: 48.5%;
+            height: 70vh;
+        }
+
+        .img_dish2 {
+            background: url("https://i0.wp.com/cochonrestaurant.com/wp-content/uploads/2020/02/image-break-two.jpg?fit=570%2C405&ssl=1");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* border: 2px solid red; */
+            width: 48.5%;
+            height: 70vh;
+        }
+
+        .containt_2 {
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 0rem 4rem 0rem;
+        }
+
+        .btn_1 {
+            border: 1px solid #bd621c;
+            background: #bd621c;
+            color: white;
+            margin-top: .5rem;
+            padding: .9rem 2rem;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 500;
+            font-size: .8rem;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+        }
+
+        .btn_1:hover {
+            background-color: #4a1509;
+            border-color: #4a1509;
+            cursor: pointer;
+        }
+
+        .containt_3 {
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inner_containt_3 {
+            background-color: #4a1509;
+            width: 97%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 0rem 4rem 0rem;
+        }
+
+        .heading_2 {
+            color: white;
+        }
+
+        .para6 {
+            color: white;
+            width: 56%;
+        }
+
+        .txt_1 {
+            color: #bd621c;
+            text-decoration: none;
+        }
+
+        .txt_1:hover {
+            color: #bd621c;
+            text-decoration: underline;
+        }
+
+        .btn_2 {
+            font-size: 1.1rem;
+            border: 1px solid #bd621c;
+            background: #bd621c;
+            color: white;
+            margin-top: .5rem;
+            padding: .9rem 2rem;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 500;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+        }
+
+        .dish_1 {
+            height: 75vh;
+        }
+
+        .img_dish3 {
+            background: url("https://i2.wp.com/cochonrestaurant.com/wp-content/uploads/2020/02/image-break-three.jpg?fit=570%2C405&ssl=1");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .img_dish4 {
+            background: url("https://i1.wp.com/cochonrestaurant.com/wp-content/uploads/2020/02/image-break-four.jpg?fit=570%2C405&ssl=1");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .containt_4 {
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0rem;
+        }
+
+        .heading_3 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1rem;
+            margin-bottom: .5rem;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+        }
+
+        .img_dish5 {
+            background: url("https://i1.wp.com/cochonrestaurant.com/wp-content/uploads/2022/08/Cochon-6537.jpg?fit=555%2C370&ssl=1");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .img_dish6 {
+            background: url("https://i1.wp.com/cochonrestaurant.com/wp-content/uploads/2022/04/Calcasieu-Renovations-12.jpg?fit=555%2C370&ssl=1");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .containt_5 {
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inner_containt_1 {
+            /* border: 2px solid red; */
+            width: 48.5%;
+            height: 50vh;
+            padding: 0rem 2rem;
+        }
+
+        .inner_containt_2 {
+            /* border: 2px solid red; */
+            width: 48.5%;
+            height: 50vh;
+            padding: 0rem 2rem;
+        }
+
+        .para7 {
+            text-align: unset;
+            font-size: 1rem;
+            width: 100%;
+            margin-bottom: .5rem;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .para8 {
+            width: 54%;
+        }
+
+        .para9 {
+            word-spacing: 10px;
+            margin-top: 2rem;
+            font-size: .9rem;
+        }
+
+        .txt2 {
+            color: #bd621c;
+        }
+
+        .dis_2 {
+            height: 100vh;
+        }
+
+        .img_dish7 {
+            background: url("https://i1.wp.com/cochonrestaurant.com/wp-content/uploads/2020/02/cochon_42T7817.jpg?fit=1157%2C670&ssl=1");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* border: 2px solid red; */
+            width: 97%;
+            height: 100vh;
+        }
+
+        .form_container {
+            /* border: 2px solid red; */
+            background: url("https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/texture.png");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heading {
+            /* border: 2px solid black; */
+            text-align: center;
+            padding: 2rem 0rem;
+            width: 100%;
+        }
+
+        .form {
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .form_box1 {
+            /* border: 2px solid orange; */
+            width: 50%;
+        }
+
+        .para10 {
+            font-size: 1.2rem;
+            font-family: Courier;
+            line-height: 2.5;
+        }
+
+        .form_input {
+            font-size: 1rem;
+            border: unset;
+            background-color: rgba(0, 0, 0, .1);
+            color: #000;
+            padding: 12px 13px;
+            letter-spacing: .03em;
+            font-family: Courier;
+            width: 95%;
+            height: 7vh;
+
+        }
+
+        .form_box2 {
+            /* border: 2px solid gray; */
+            width: 50%;
+        }
+
+        #txtarea {
+            font-size: 1rem;
+            border: unset;
+            background-color: rgba(0, 0, 0, .1);
+            color: #000;
+            padding: 12px 13px;
+            letter-spacing: .03em;
+            font-family: Courier;
+            width: 100%;
+        }
+
+        .btn_4 {
+            margin: 3rem 0rem;
+        }
+
+        @media screen and (max-width:1024px) {
+            #img1 {
+                width: 100%;
+            }
+
+            .containt_02 {
+                padding: 15rem 0rem 4rem 0rem;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .nav {
+                width: 100%;
+            }
+
+            .img {
+                width: 30%;
+            }
+
+            #img1 {
+                width: 60%;
+            }
+
+            .head {
+                width: 40%;
+            }
+
+            .info {
+                width: 30%;
+            }
+
+            #img2 {
+                width: 50%;
+            }
+
+            .para5 {
+                width: 85%;
+            }
+
+            .heading_1 {
+                font-size: 1rem;
+            }
+
+            .para7 {
+                font-size: 0.9rem;
+            }
+
+            .btn_1 {
+                padding: 0.7rem 2rem;
+            }
+
+            .containt_02 {
+                padding: 20rem 0rem 4rem 0rem;
+            }
+
+            .form {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .main {
+                height: 10vh;
+            }
+
+            .para1 {
+                text-align: center;
+            }
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .img {
+                display: none;
+            }
+
+            .head {
+                width: 80%;
+            }
+
+            .info {
+                width: 80%;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .footer {
+                padding: 0rem 1rem;
+            }
+
+            .inner_containt_1 {
+                padding: 0rem 1rem;
+            }
+
+            .inner_containt_2 {
+                padding: 0rem 1rem;
+            }
+
+            .containt_02 {
+                padding: 60rem 0rem 4rem 0rem;
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .form_input {
+                width: 100%;
+            }
+
+            .form_box1 {
+                width: 100%;
+            }
+
+            .form_box2 {
+                width: 100%;
+            }
+
+            .btn_1 {
+                padding: 0.7rem 1.3rem;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="main_container">
+        <div class="main">
+            <p class="para1">Dine-In <a href="" class="highlight">Reservations</a> | Walk-Ins Welcome | <a href=""
+                    class="highlight">Private Dining</a></p>
+        </div>
+        <div class="nav">
+            <div class="img">
+                <img src="https://i1.wp.com/cochonrestaurant.com/wp-content/uploads/2022/02/logo.png?w=391&ssl=1" alt=""
+                    id="img1">
+            </div>
+            <div class="head">
+                <img src="	https://cochonrestaurant.com/wp-content/themes/cochon-sections/images/logo.png" alt=""
+                    id="img2">
+            </div>
+            <div class="info">
+                <p class="para2">930 TCHOUPITOULAS</p>
+                <p class="para3">504 588 2123</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="para4"><a href="" class="txt">MENUS</a> / <a href="" class="txt">RESERVATIONS</a> / <a href=""
+                    class="txt">PRIVATE DINING</a> / <a href="" class="txt">ABOUT</a> / <a href=""
+                    class="txt">CAREERS</a> / <a href="" class="txt">SHOP</a> / <a href="" class="txt">CONTACT</a></p>
+        </div>
+    </div>
+    <div class="image">
+        <div class="back_img"></div>
+    </div>
+    <div class="containt_1">
+        <h1 class="heading_1">WELCOME TO COCHON</h1>
+        <img src="https://cochonrestaurant.com/wp-content/uploads/2020/02/flame.png" alt="" class="img3">
+        <p class="para5">At Cochon, Chef Donald Link has reconnected with his culinary roots, serving the traditional
+            Cajun Southern dishes he grew up with. Chef Link and Chef/Co-owner Stephen Stryjewski are working with
+            locally sourced pork, fresh produce and seafood, focusing on traditional methods, creating authentic flavors
+            of Cajun country. The restaurant is set in a rustic, yet contemporary interior of a renovated New Orleans
+            warehouse.</p>
+    </div>
+    <div class="dish">
+        <div class="img_dish1"></div>
+        <div class="img_dish2"></div>
+    </div>
+    <div class="containt_2">
+        <h1 class="heading_1">MENUS</h1>
+        <p class="para5">Our traditional Southern menus are custom crafted to meet your needs. We use locally sourced
+            pork, fresh produce and seafood to create the authentic flavors of Cajun country.</p>
+        <button class="btn_1">SEE MENUS</button>
+    </div>
+    <div class="containt_3">
+        <div class="inner_containt_3">
+            <h1 class="heading_1 heading_2">RESERVATIONS</h1>
+            <p class="para5 para6">We hold space at the bar, the chef’s counter and weather permitting the patio for
+                walk-ins. We can also accommodate larger parties. Please contact us at <a href=""
+                    class="txt_1">504.588.2123</a> or <a href="" class="txt_1">info@cochonrestaurant.com</a> with any
+                questions or concerns.</p>
+            <button class="btn_2">Book Now</button>
+        </div>
+    </div>
+    <div class="dish dish_1">
+        <div class="img_dish1 img_dish3"></div>
+        <div class="img_dish2 img_dish4"></div>
+    </div>
+    <div class="containt_4">
+        <h1 class="heading_3">PRIVATE DINNING</h1>
+    </div>
+    <div class="dish dish_1">
+        <div class="img_dish1 img_dish5"></div>
+        <div class="img_dish2 img_dish6"></div>
+    </div>
+    <div class="containt_5">
+        <div class="inner_containt_1">
+            <h1 class="heading_1">COCHON / SEMI-PRIVATE EVENTS</h1>
+            <p class="para5 para7">We host groups of 8 to 20 in the Diamond Street dining room featuring our ‘Feed Me’
+                menu. The ‘Feed Me’ menu is offered in 3 or 4 courses, showcasing Chef’s choice of Cochon’s signature
+                dishes & seasonal specials. A whole roasted suckling pig can always be added!</p>
+            <p class="para5 para7">The Mezzanine is Cochon’s semi-private balcony overlooking the Diamond Street dining
+                room and can accommodate groups for seated meals and reception-style events. A food & beverage minimum
+                applies for this space.</p>
+            <div class="button">
+                <button class="btn_1 btn_3">LET'S TALK</button>
+            </div>
+        </div>
+        <div class="inner_containt_2">
+            <h1 class="heading_1">CALCASIEU / PRIVATE EVENTS</h1>
+            <p class="para5 para7">Cochon also hosts a variety of fully private dining & catering events. We hold these
+                above the restaurant at Calcasieu, our private dining event facility.</p>
+            <p class="para5 para7">We offer a complete range of catered events from plated dinners to reception-style
+                gatherings. Event pricing is based on food and beverage minimums, which vary seasonally, as well as menu
+                selection, beverage packages, and duration of event. View Sample Menu.</p>
+            <div class="button">
+                <button class="btn_1 btn_3">BOOK NOW</button>
+            </div>
+        </div>
+    </div>
+    <div class="containt_2 containt_02">
+        <h1 class="heading_1">ABOUT US</h1>
+        <p class="para5 para8">At Cochon, Chef Link has reconnected with his culinary roots, serving the traditional
+            Cajun Southern dishes he grew up with. Chef Link and Chef/Co-owner Stephen Stryjewski are working with
+            locally sourced pork, fresh produce and seafood, focusing on traditional methods, creating authentic flavors
+            of Cajun country.</p>
+        <p class="para1 para9"><a href="" class="txt txt2">TEAM</a> <a href="" class="txt txt2">FARMS</a> <a href=""
+                class="txt txt2">PRESS</a> <a href="" class="txt txt2">FOUNDATION</a></p>
+    </div>
+    <div class="dish dish_1 dis_2">
+        <div class="img_dish1 img_dish7"></div>
+    </div>
+    <div class="form_container">
+        <div class="heading">
+            <h1 class="heading_3">CONTACT US</h1>
+        </div>
+        <div class="form">
+            <div class="form_box1">
+                <p class="para10">FIRST AND LAST NAME</p>
+                <input type="text" class="form_input">
+                <p class="para10">EMAIL ADDRESS</p>
+                <input type="text" class="form_input">
+                <p class="para10">PHONE NUMBER</p>
+                <input type="text" class="form_input">
+            </div>
+            <div class="form_box2">
+                <p class="para10">COMMENTS</p>
+                <textarea name="text" id="txtarea" cols="50" rows="13"></textarea>
+            </div>
+        </div>
+        <button class="btn_1 btn_4">SUBMIT</button>
+    </div>
+</body>
+
+</html>

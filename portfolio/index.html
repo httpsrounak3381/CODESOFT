@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./responsive.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #131417;
+            width: 100%;
+            /* height: 100vh; */
+        }
+
+        .nav {
+            background-color: #28161C;
+            color: white;
+            display: flex;
+            width: 100%;
+            height: 9vh;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            z-index: 100;
+        }
+
+        .title {
+            /* border: 2px solid red; */
+            font-family: "Space Mono", monospace;
+            font-size: 2.2rem;
+            margin-left: 7rem;
+        }
+
+        ul {
+            /* border: 2px solid white; */
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-right: 5rem;
+        }
+
+        ul>a {
+            /* border: 2px solid white; */
+            font-family: "Roboto", sans-serif;
+            list-style: none;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: white;
+            text-decoration: none;
+        }
+
+        .container1 {
+            /* border: 2px solid white; */
+            width: 100%;
+            display: flex;
+            /* height: 91vh; */
+        }
+
+        .container2 {
+            /* border: 2px solid red; */
+            position: relative;
+            width: 50%;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .name {
+            /* border: 2px solid white; */
+            position: relative;
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 5rem;
+            margin-left: 20rem;
+            margin-bottom: 7rem;
+        }
+
+        .icon_container {
+            /* border: 2px solid white; */
+            margin-left: 25rem;
+        }
+
+        .icon {
+            width: 9%;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+        }
+
+        .container3 {
+            /* border: 2px solid blue; */
+            color: white;
+            font-family: "Roboto", sans-serif;
+            width: 50%;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .discription {
+            /* border: 2px solid yellow; */
+            width: 75%;
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-left: 7rem;
+            line-height: 40px;
+        }
+
+        .container4 {
+            /* border: 2px solid white; */
+            background-color: #28161C;
+            padding-top: 5rem;
+        }
+
+        .card {
+            /* border: 2px solid red; */
+            display: flex;
+            width: 85%;
+            margin-left: 7rem;
+            padding-bottom: 1rem;
+        }
+
+        .reverce_card {
+            flex-direction: row-reverse;
+        }
+
+        .container5 {
+            /* border: 2px solid blue; */
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .display {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+        }
+
+        .container6 {
+            /* border: 2px solid yellow; */
+            color: white;
+            font-family: "Roboto", sans-serif;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 5rem;
+        }
+
+        .heading {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .content_2 {
+            color: #47CF73;
+            font-weight: 400;
+        }
+
+        .content_img {
+            width: 30%;
+            margin-bottom: .5rem;
+        }
+
+        .content_img_2 {
+            width: 15%;
+        }
+
+        .content_img_3 {
+            width: 23%;
+            margin-bottom: 1rem;
+        }
+
+        .container7 {
+            /* border: 2px solid white; */
+            background-color: #28161C;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 2rem;
+        }
+
+        .heading2 {
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .card_container {
+            /* border: 2px solid blue; */
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .templets {
+            /* border: 2px solid yellow; */
+            border-radius: 10px;
+            background-color: #2C303A;
+            width: 48%;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .head {
+            border-bottom: 2px solid gray;
+            display: flex;
+            align-items: center;
+            padding-bottom: .5rem;
+        }
+
+        .heading_img {
+            width: 6%;
+        }
+
+        .heading3 {
+            color: white;
+            margin-left: 1.4rem;
+        }
+
+        .details {
+            color: white;
+            font-size: 1.4rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            line-height: 30px;
+            margin-top: 1rem;
+        }
+
+        .button {
+            background-color: #47CF73;
+            border: none;
+            border-radius: 10px;
+            color: black;
+            font-size: 1.2rem;
+            padding: .8rem 2rem;
+            margin-top: 1rem;
+        }
+
+        .card_container2 {
+            /* border: 2px solid white; */
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .templets_2 {
+            /* border: 2px solid blue; */
+            border-radius: 10px;
+            background-color: #2C303A;
+            width: 30%;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .heading4 {
+            color: white;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .button2 {
+            margin-right: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container8 {
+            background-color: #28161C;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card_container3 {
+            /* border: 2px solid white; */
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+        .templets_3 {
+            /* border: 2px solid yellow; */
+            border-radius: 10px;
+            background-color: #2C303A;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+
+        }
+
+        .achivement_img {
+            width: 85%;
+            aspect-ratio: 3/2;
+            /* object-fit: contain; */
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .achivement_description {
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+            width: 80%;
+        }
+
+        .container9 {
+            /* border: 2px solid white; */
+            background-color: #2C303A;
+            border-radius: 10px;
+            width: 80%;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+        }
+
+        .main_image {
+            /* border: 2px solid yellow; */
+            width: 30%;
+            height: 50vh;
+            background-size: 27rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("./images/coderboy-removebg-preview.png");
+            margin: 2rem 0rem;
+        }
+
+        .contact {
+            /* border: 2px solid blue; */
+            width: 70%;
+            margin-left: 3rem;
+            margin-top: 3rem;
+        }
+
+        .heading_5 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .contact_para {
+            font-family: "Roboto", sans-serif;
+            color: #47CF73;
+            font-size: 1.3rem;
+            opacity: .9;
+        }
+
+        .contact_para_2 {
+            font-family: "Roboto", sans-serif;
+            color: white;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            line-height: 35px;
+        }
+
+        .icon_container_2 {
+            margin-left: 0rem;
+        }
+
+        .icon_2 {
+            width: 6%;
+            margin-top: 3rem;
+        }
+
+        .copyright {
+            /* border: 2px solid white; */
+            background-color: #2C303A;
+            width: 100%;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copyright_text {
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.5rem;
+        }
+
+        .bar {
+            position: absolute;
+            top: 405px;
+            left: 330px;
+            width: 4%;
+            height: 1.1vh;
+            background-color: #47CF73;
+        }
+
+        .coderboy {
+            position: absolute;
+            top: -75px;
+            left: 775px;
+            width: 24%;
+            filter: drop-shadow(2px 4px 6px rgb(169, 145, 145));
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .coderboy {
+                display: none;
+            }
+
+            .title {
+                margin-left: 2rem;
+                font-size: 1.4rem;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            ul>a {
+                font-size: 1rem;
+                margin-left: 5rem;
+            }
+
+            .name {
+                margin-left: 1rem;
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+            }
+
+            .icon_container {
+                margin-left: 1rem;
+            }
+
+            .container2,
+            .container3 {
+                height: 35vh;
+            }
+
+            .bar {
+                position: absolute;
+                top: 210px;
+                left: 1rem;
+                width: 13%;
+                height: .6vh;
+            }
+
+            .discription {
+                width: 80%;
+                font-size: .5rem;
+                margin-left: 1rem;
+                line-height: 20px;
+                margin-bottom: .8rem;
+            }
+
+            .icon {
+                width: 15%;
+            }
+
+            .container4 {
+                padding-top: 2rem;
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+
+            .container5 {
+                width: 100%;
+            }
+
+            .container6 {
+                width: 100%;
+                padding-left: 1rem;
+            }
+
+            .heading {
+                font-size: 2.5rem;
+            }
+
+            .content {
+                font-size: 1rem;
+            }
+
+            .heading2 {
+                font-size: 2.5rem;
+            }
+
+            .card_container {
+                width: 100%;
+            }
+
+            .templets {
+                margin: 0rem 2rem;
+                margin-bottom: 2rem;
+                padding: 1.5rem;
+                width: 100%;
+            }
+
+            .heading_img {
+                width: 8%;
+            }
+
+            .heading3 {
+                font-size: 1.5rem;
+            }
+
+            .details {
+                font-size: 1rem;
+            }
+
+            .templets_2 {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .heading4 {
+                font-size: 1.5rem;
+            }
+
+            .templets_3 {
+                width: 100%;
+            }
+
+            .button {
+                font-size: 1rem;
+            }
+
+            .achivement_description {
+                color: white;
+                font-family: "Roboto", sans-serif;
+                font-size: 1.1rem;
+                text-align: center;
+                width: 95%;
+            }
+
+            .container9 {
+                margin-top: 2rem;
+            }
+
+            .main_image {
+                display: none;
+            }
+
+            .contact {
+                margin: 2rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .heading_5 {
+                font-size: 2rem;
+                margin-top: 0rem;
+            }
+
+            .contact_para {
+                font-size: .8rem;
+                text-align: center;
+            }
+
+            .contact_para_2 {
+                font-size: .9rem;
+                line-height: 25px;
+                margin-top: 2rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .icon_container_2 {
+                margin-left: 0rem;
+            }
+
+            .copyright_text {
+                font-size: .9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <h1 class="title">Portfolio</h1>
+            <ul>
+                <a href="#skills" class="hidden">
+                    <li>Skills</li>
+                </a>
+                <a href="#projects" class="hidden">
+                    <li>Projects</li>
+                </a>
+                <a href="#achivememts" class="hidden">
+                    <li>Achivements</li>
+                </a>
+                <a href="./Resume/ROUNAK_PRADHAN_RESUME"download>
+                    <li>Resume</li>
+                </a>
+                <a href="#contact" class="hidden">
+                    <li>Contact Me</li>
+                </a>
+            </ul>
+        </div>
+        <div class="container1">
+            <div class="container2">
+                <h1 class="name">Rounak <br>Pradhan</h1>
+                <div class="icon_container">
+                    <a href="https://www.instagram.com/_roun.ak07/"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/900px-Instagram_icon.png?20200512141346"
+                            alt="" class="icon"></a>
+                    <a href="https://www.linkedin.com/in/rounak-pradhan-a123ba239/"><img
+                            src="https://static.vecteezy.com/system/resources/previews/016/716/470/large_2x/linkedin-icon-free-png.png"
+                            alt="" class="icon"></a>
+                    <a href="https://github.com/httpsrounak3381?tab=repositories"><img
+                            src="https://cdn-icons-png.freepik.com/512/3291/3291667.png" alt="" class="icon"></a>
+                </div>
+            </div>
+            <div class="container3">
+                <p class="discription">As a <strong>Second-year CSE </strong>Student specializing in data analytics, I
+                    am enthusiastic about Leveraging
+                    data to address complex challenges and derive meaningful insights. I have completed some full
+                    stack projects and have solve over many problems in LeetCode and Hackerrank.
+                </p>
+            </div>
+        </div>
+        <div class="container4" id="skills">
+            <div class="card">
+                <div class="container5">
+                    <img src="https://school.mangoanimate.com/wp-content/uploads/2023/05/Animated-Educational-Videos-for-Students-to-Learn-With-Fun.webp"
+                        alt="" class="display">
+                </div>
+                <div class="container6">
+                    <h1 class="heading">Skills</h1>
+                    <p class="content content_2"> CRAZY FULL STACK DEVELOPER WHO WANT TO EXPLORE EVERY TECH STACK</p>
+                    <img src="./images/Frame.png" alt="" class="content_img">
+                    <p class="content">⚡I specialize in creating dynamic and responsive web applications using MongoDB,
+                        Express.js, React.js, and Node.js.</pr>
+                    <p class="content">⚡My expertise in web technologies includes a strong foundation in HTML, CSS, and
+                        JavaScript, allowing me to build seamless and interactive user interfaces.</p>
+                    <p class="content">⚡I am also skilled in several programming languages, including C, Python, and
+                        JavaScript, which enable me to develop robust and efficient backend systems.</p>
+                </div>
+            </div>
+            <div class="card reverce_card">
+                <div class="container5">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-7a0d79346763af4ea4ae6814414d19f2" alt=""
+                        class="display">
+                </div>
+                <div class="container6">
+                    <h1 class="heading">Skills</h1>
+                    <p class="content content_2">DATA ANALYSIS AND VISUALIZATION</p>
+                    <img src="./images/Frame ff.png" alt="" class="content_img content_img_2">
+                    <p class="content">⚡Providing expertise in data storage structures, data mining, and data cleansing
+                        to Coming up with solutions to costly business problems.</p>
+                    <p class="content">⚡Tableau, Power BI, Excel (Advanced), SQL, Python (pandas, NumPy), R</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container5">
+                    <img src="https://cdn.pixabay.com/photo/2024/05/20/16/24/ai-generated-8775742_640.png" alt=""
+                        class="display">
+                </div>
+                <div class="container6">
+                    <h1 class="heading">Skills</h1>
+                    <p class="content content_2">MACHINE LEARNING</p>
+                    <img src="./images/Frame jj.png" alt="" class="content_img content_img_3">
+                    <p class="content">⚡ Expertise in working with big data analytics, and complex data structures, are
+                        a must. </pr>
+                    <p class="content">⚡Work with data to create models, perform statistical analysis, and train and
+                        retrain systems to optimize performance. </p>
+                </div>
+            </div>
+        </div>
+        <div class="container7" id="projects">
+            <h1 class="heading2">Projects</h1>
+            <div class="card_container">
+                <div class="templets">
+                    <div class="head">
+                        <img src="./images/Frame 3.png" alt="" class="heading_img">
+                        <h1 class="heading3">Fitness Freak</h1>
+                    </div>
+                    <p class="details"> This project mainly help the youth to digitally provide
+                        them a balance diet chart and workouts.</p>
+                    <a href="#"><button class="button">View</button></a>
+                </div>
+                <div class="templets">
+                    <div class="head">
+                        <img src="./images/Frame 3.png" alt="" class="heading_img">
+                        <h1 class="heading3"> UI/UX Designer</h1>
+                    </div>
+                    <p class="details">I have designed numerous web pages and created a concept design for INKRONIX
+                        SOFTWARES using Figma, showcasing my expertise in web design and user interface development.</p>
+                    <a
+                        href="https://www.figma.com/design/QR1Iq9o5Wr0jTTPc3D9x5Q/practice-1?node-id=0-1&t=N2ixWtJsD7kKeI1t-1"><button
+                            class="button">View</button></a>
+                </div>
+                <div class="templets">
+                    <div class="head">
+                        <img src="./images/Frame 3.png" alt="" class="heading_img">
+                        <h1 class="heading3"> Network Traffic Analyser</h1>
+                    </div>
+                    <p class="details">I used Python for network traffic analysis, leveraging its powerful tools to
+                        monitor and analyze data, identify security threats, and address performance issues effectively.
+                    </p>
+                    <a href="#"><button class="button">View</button></a>
+                </div>
+                <div class="templets">
+                    <div class="head">
+                        <img src="./images/Frame 3.png" alt="" class="heading_img">
+                        <h1 class="heading3">Crime Alert</h1>
+                    </div>
+                    <p class="details">Discover real-time crime data with Crime Alert. Track and visualize incident
+                        trends using interactive charts and graphs, empowering you to make informed safety decisions and
+                        plan your travels confidently.</p>
+                    <a href="#"><button class="button">View</button></a>
+                </div>
+                <div class="templets">
+                    <div class="head">
+                        <img src="./images/Frame 3.png" alt="" class="heading_img">
+                        <h1 class="heading3">Snapchat Clone</h1>
+                    </div>
+                    <p class="details">Clone of Snapchat using html,css</p>
+                    <a href="#"><button class="button button2">Preview</button></a>
+                    <button class="button"><a href="#">Code</a></button>
+                </div>
+                <div class="templets">
+                    <div class="head">
+                        <img src="./images/Frame 3.png" alt="" class="heading_img">
+                        <h1 class="heading3">Netflix Clone</h1>
+                    </div>
+                    <p class="details">Clone of Netflix using html,css</p>
+                    <a href="#"><button class="button button2">Preview</button></a>
+                    <button class="button"><a href="#">Code</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="container8" id="achivememts">
+            <h1 class="heading2 heading_0">Achivements</h1>
+            <div class="card_container3">
+                <div class="templets_3">
+                    <img src="https://d8it4huxumps7.cloudfront.net/lambda-pdfs/opportunity-bannerImages/1711446762.png"
+                        alt="" class="achivement_img">
+                    <p class="achivement_description">Participated in Code Hunt organized by UIM, showcasing programming
+                        skills and problem-solving abilities in a competitive environment.</p>
+                </div>
+                <div class="templets_3">
+                    <img src="https://analyticsindiamag.com/wp-content/uploads/2024/06/AI-is-Helping-People-Moonlight-and-Call-Themselves-%E2%80%98Overemployed-Software-Engineers.jpg"
+                        alt="" class="achivement_img">
+                    <p class="achivement_description">Participated in Software Scheming organized by UIM, demonstrating
+                        strategic planning, coding skills, and problem-solving abilities in a collaborative setting.</p>
+                </div>
+                <div class="templets_3">
+                    <img src="https://www.codingbytes.com/wp-content/uploads/2022/03/full-stack-web-development.jpg"
+                        alt="" class="achivement_img">
+                    <p class="achivement_description">Internship training in Full stack web development. demonstrating
+                        strategic planning, coding skills, and problem-solving abilities in a collaborative setting</p>
+                </div>
+                <div class="templets_3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkZkNUn6DkvIylAwGqeMJfqHw-R2Rzdnqkw&s"
+                        alt="" class="achivement_img">
+                    <p class="achivement_description">IBM Cognitive Python integrates AI and machine learning tools to
+                        build intelligent applications, enhancing decision-making and automation processes.</p>
+                </div>
+                <div class="templets_3">
+                    <img src="https://i.pcmag.com/imagery/reviews/07hQd4umfCmvTfd7x2uiOP2-9.fit_scale.size_760x427.v1569472395.jpg"
+                        alt="" class="achivement_img">
+                    <p class="achivement_description">IBM Watson Data Visualization creates interactive charts, offering
+                        insightful data representations to enhance decision-making processes.</p>
+                </div>
+                <div class="templets_3">
+                    <img src="https://curator-production.s3.us.cloud-object-storage.appdomain.cloud/uploads/Machine%20Learning%20with%20Python.png"
+                        alt="" class="achivement_img">
+                    <p class="achivement_description">IBM Cognitive Machine Learning leverages AI to enhance
+                        decision-making, automate processes, and derive insights from complex data sets.</p>
+                </div>
+            </div>
+            <div class="container9" id="contact">
+                <div class="main_image">
+                    <!-- <img src="./images/coderboy-removebg-preview.png" alt="" class="coderboy_2"> -->
+                </div>
+                <div class="contact">
+                    <h1 class="heading2 heading_5">Contact Me</h1>
+                    <p class="contact_para">DISCUSS A PROJECT OR JUST WANT TO SAY HI MY INBOX IS OPEN FOR ALL</p>
+                    <p class="contact_para_2">Highly organized and proactive student with excellent communication skills
+                        and a strong work ethic. Proven ability to work well in team environments and collaborate
+                        effectively with peers. Seeking a part-time job to develop professional skills and contribute to
+                        a dynamic organization</p>
+                    <br><br>
+                    <p class="contact_para">Email id:- <a href="">https.rounak3381@gmail.com</a></p>
+                    <div class="icon_container icon_container_2">
+                        <a href="https://www.instagram.com/_roun.ak07/21"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/900px-Instagram_icon.png?20200512141346"
+                                alt="" class="icon icon_2"></a>
+                        <a href="https://www.linkedin.com/in/rounak-pradhan-a123ba239/"><img
+                                src="https://static.vecteezy.com/system/resources/previews/016/716/470/large_2x/linkedin-icon-free-png.png"
+                                alt="" class="icon icon_2"></a>
+                        <a href="https://github.com/httpsrounak3381?tab=repositories"><img
+                                src="https://cdn-icons-png.freepik.com/512/3291/3291667.png" alt=""
+                                class="icon icon_2"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="copyright_text">Copyright © 2024; Designed By Rounak Pradhan.</p>
+        </div>
+    </div>
+
+
+    <div class="bar"></div>
+    <img src="./images/coderboy-removebg-preview.png" alt="" class="coderboy">
+</body>
+
+</html>
